@@ -1,0 +1,1 @@
+Make cmc workshop template with bootstrap
