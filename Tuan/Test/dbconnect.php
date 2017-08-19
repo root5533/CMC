@@ -5,10 +5,10 @@ function openDB() {
     $domain = 'localhost';
     $username = 'root';
     $password = '';
-    $db = 'headfirst';
+    $db = 'workshopmanagementsystem';
 
     $dbc = mysqli_connect($domain,$username,$password,$db)
-    or die(mysqli_connect_error());
+        or die(mysqli_connect_error());
     return $dbc;
 }
 
