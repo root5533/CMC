@@ -12,7 +12,7 @@ $brand = null;
 $type = null;
 
 if (isset($_POST['add_vehicle'])) {
-    echo "zero zero<br>";
+
     $driver_id = $_POST['driver_id'];
     $vehicle_no = $_POST['vehicle_no'];
     $brand = $_POST['brand'];

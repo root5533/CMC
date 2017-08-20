@@ -1,10 +1,10 @@
 <?php
 
 require 'dbconnect.php';
-echo "0000 <br>";
+
 
 function addVehicle($array) {
-    echo "11111 <br>";
+
     $driver_id = $_POST['driver_id'];
     $vehicle_no = $_POST['vehicle_no'];
     $brand = $_POST['brand'];
@@ -37,7 +37,7 @@ function addVehicle($array) {
         $result = mysqli_query($dbc,$query)
             or die(mysqli_error($dbc));
         closeDB($dbc);
-        echo "Registration Successful!";
+        echo " Vehicle registration Successful!";
         return false;
     }
     else {
