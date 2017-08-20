@@ -45,3 +45,31 @@ function addVehicle($array) {
     }
 
 }
+
+function getVehicles() {
+    $query = "select idVehicle,RegistrationNo from vehicle";
+    $dbc = openDB();
+    $result = mysqli_query($dbc,$query)
+        or die(mysqli_error($dbc));
+    closeDB($dbc);
+    return $result;
+}
+
+function addVehicleEntry($array) {
+    $dbc = openDB();
+    $vehicle_id = $array['vehicle'];
+    if (strlen(trim($vehicle_id)) == 0) {
+        echo "<p class='error'>*Please enter valid vehicle registration </p>";
+        return true;
+    }
+    else {
+        $query = "insert into vehicleentryrecord(idVehicle,entry_time)
+              values('$vehicle_id',NOW())";
+        $result = mysqli_query($dbc,$query)
+        or die(mysqli_error($dbc));
+        closeDB($dbc);
+        echo "Vehicle Entry Record Added!!";
+        return false;
+    }
+
+}

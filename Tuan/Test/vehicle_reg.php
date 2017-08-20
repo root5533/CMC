@@ -4,6 +4,7 @@ echo
 "<h2> Vehicle Registration </h2>";
 
 require 'vehicle_func.php';
+require 'driver_func.php';
 
 $outform = true;
 $driver_id = null;
@@ -33,11 +34,31 @@ if ($outform == true) {
     <option value='ambulance'>Ambulance</option>
     <option value='tipper'>Tipper</option>
     </select> <br>
-    <label>Driver ID</label>
-    <input type='text' name='driver_id' value='$driver_id' required> <br>
+    <label>Driver ID : </label>";
+
+    echo "<input list='driver' name='driver_id' required>
+    <datalist id='driver'>
+        ";
+
+    $drivers = getDrivers();
+    while ($row = mysqli_fetch_array($drivers)) {
+        $value = $row['idDriver'];
+        $name = $row['Name'];
+        echo
+        "<option value='$value'>$name</option>";
+    }
+
+//    while ($row = mysqli_fetch_array($drivers)) {
+//        $name = $row['Name'];
+//        $id = $row['idDriver'];
+//        echo "$name, $id <br>";
+//    }
+
+    echo
+    "</datalist> <br>
     <label>Vehicle Registration No. </label> 
     <input type='text' name='vehicle_no' value='$vehicle_no' required> <br>
     <input type='submit' name='add_vehicle' value='Register Vehicle'>
-    </form>
+    </form> 
     ";
 }

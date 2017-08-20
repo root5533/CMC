@@ -1,6 +1,6 @@
 <?php
 
-require 'dbconnect.php';
+require_once 'dbconnect.php';
 
 function addDriver($array) {
     $name = $_POST['name'];
@@ -39,9 +39,19 @@ function addDriver($array) {
             or die(mysqli_error($dbc));
         echo "Driver registration successful <br>";
         return false;
+        closeDB($dbc);
     }
     else {
         return true;
     }
 
+}
+
+function getDrivers() {
+    $dbc = openDB();
+    $query = "select idDriver,Name from driver";
+    $drivers = mysqli_query($dbc,$query)
+        or die(mysqli_error($dbc));
+    closeDB($dbc);
+    return $drivers;
 }

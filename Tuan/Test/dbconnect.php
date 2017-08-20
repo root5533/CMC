@@ -12,7 +12,6 @@ function openDB() {
     return $dbc;
 }
 
-
 function closeDB($dbc){
     mysqli_close($dbc);
 }
