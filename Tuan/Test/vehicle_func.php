@@ -73,3 +73,14 @@ function addVehicleEntry($array) {
     }
 
 }
+
+function getVehicleIn() {
+    $query = "select vehicle.idVehicle,vehicle.RegistrationNo from vehicle,vehicleentryrecord
+              where vehicle.idVehicle = vehicleentryrecord.idVehicle
+              and vehicleentryrecord.vehicle_exit = 0";
+    $dbc = openDB();
+    $result = mysqli_query($dbc,$query)
+        or die(mysqli_error($dbc));
+    closeDB($dbc);
+    return $result;
+}
