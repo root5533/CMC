@@ -1,10 +1,13 @@
+head{
+
+}
 body{
 	background-color:#91ccef;
 	font-family:century gothic,verdana, georgia;
 	font-size:14px;
-	margin:0px;
+	margin:0px 120px 0px 120px;
 }
-
+/* Top login bar */
 #topBar{
 	height:43pt;
 	background-color:black;
@@ -14,7 +17,7 @@ body{
 
 #searchBar{
 	display:inline;
-	position:fixed;
+	position:absolute;
 	top:15px;
 	left:15%;
 	
@@ -23,17 +26,17 @@ body{
 #search{
 	background-color:#f7d5d6;
 	border:0px;
+	padding:2px 5px 2px 5px;
 	border-radius:5px;
 	height:20px;
 }
 
 #loginBar{
 	display:inline;
-	position:fixed;
-
+	position:absolute;
 	font-size:12px;
 	top:15px;
-	right:2%;
+	right:12%;
 	background-color:#636363;
 	border:0px;
 	border-radius:5px;
@@ -50,6 +53,16 @@ body{
 	color:black;
 }
 
+/* header and navigation bar */
+
+#logo{
+	width:60px;
+	float:left;
+	position:relative;
+	top:10px;
+	left:200px;
+}
+
 #header{
 	height:135px;
 	background-color:#136360;
@@ -64,7 +77,8 @@ h1{
 }
 
 #headingWMS{
-	font-family:Harlow solid;
+	font-family:typograph pro, century gothic;
+	font-weight:normal;
 	font-size:40px;
 }
 
@@ -75,7 +89,7 @@ h1{
 }
 
 #navbar{
-
+	text-align:center;
 }
 
 #navbar ul{
@@ -99,30 +113,35 @@ h1{
 }
 
 #navbar ul li a{
-	color:#136360;
+	color:#91ccef;
 	font-size:120%;
 	font-weight:500;
 	text-transform:uppercase;
 	text-decoration:none;
 	text-align:center;
-	background-color:#91ccef;
+	background-color:#136360;
 	margin:0px;
 	padding:3px;
 }
 
 #navbar ul li a:hover{
-	background-color:#136360;
-	color:#91ccef;
+	background-color:#91ccef;
+	color:#136360;
 }
 
+/* form body */
+
 h3{
-	margin:0px;
+	margin:10px 0px 0px 0px;
+	text-align:center;
+	font-size:180%;
+	font-weight:normal;
 }
 
 #infoHolder{
-	background-color:#73b6db;
+	background-color:#136360;
 	border-radius:10px;
-	border:solid 1px #464646;
+	
 	margin:10px 100px 10px 100px;
 }
 
@@ -133,31 +152,68 @@ h3{
 
 #infoHolder table tr td label{
 	text-align:right;
+	color:#ffffff;
 }
 
-td.col1{
+.textArea{
+	vertical-align:top;
+}
+
+input[type=text], input[type=date]{
+	background-color:#e0e3df;
+	border:none;
+	border-radius:5px;
+	border-bottom:solid 1px #727572;
+	padding:5px;
+	box-sizing:border-box;
+	color:#454545;
+	height:30px;
+	margin:2px 0px 2px 0px;
+	transition:0.4s ease-in;
+	
+}
+
+textarea{
+	background-color:#e0e3df;
+	border:none;
+	border-radius:5px;
+	border-bottom:solid 1px #727572;
+	padding:5px;
+	color:#454545;
+	margin:2px 0px 2px 0px;
+	transition:1s ease-in;
+	resize:none;
+	box-sizing:border-box
+}
+
+input:focus{
+	border:solid 1px #727572;
+	background-color:#ffffff;
+}
+
+textarea:focus{
+	border:solid 1px #727572;
+	background-color:#ffffff;
+}
+
+/* td.col1{
 	text-align:right;
+} */
+
+
+/* footer */
+
+.footer{
+	background-color:black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer p{
+	color:white;
+	font-size:12px;
+	margin:0px;
+	text-align:center;
+	
+}
 
 
 
