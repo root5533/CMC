@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 
 <html>
 
@@ -14,7 +20,7 @@
 
                 <tr>
                     <td><label>User Name:</label></td>
-                    <td><input type="text" name="username"></td>
+                    <td><input type="text" name="username" placeholder="username/email"></td>
                 </tr>
 
                 <tr>
@@ -23,11 +29,12 @@
                 </tr>
 
                 <tr>
-                    <td><input type="submit" name="login" value="Log In"></td>
+                    <td><input type="submit" name="submit" value="Log In"></td>
                 </tr>
             </table>
 
         </form>
+
 
 
     </body>
